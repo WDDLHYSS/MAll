@@ -1,0 +1,7 @@
+package com.wddlhyss.gmall.manage.mapper;
+
+import com.wddlhyss.gmall.beans.PmsBaseCatalog2;
+import tk.mybatis.mapper.common.Mapper;
+
+public interface PmsBaseCatalog2Mapper extends Mapper<PmsBaseCatalog2> {
+}

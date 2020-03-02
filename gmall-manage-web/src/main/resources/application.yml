@@ -1,0 +1,17 @@
+server:
+  port: 8082
+spring:
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+
+dubbo:
+  monitor:
+    protocol: registry
+  application:
+    name: gmall-manage-web
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    port: 20881
+

@@ -1,0 +1,30 @@
+#服务端口号
+server:
+  port: 8072
+
+#jdbc配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/gmall?characterEncoding=UTF-8
+
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true #数据库转文件java驼峰
+
+#dubbo配置
+dubbo:
+  application:
+    name: gmall-manage-service
+  registry:
+    address: 127.0.0.1:2181  #dubbo注册中心地址
+    protocol: zookeeper
+  protocol:
+    name: dubbo   #dubbo协议名称
+    port: 20881
+  monitor:
+    protocol: registry  #链接监控中心
